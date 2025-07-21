@@ -9,18 +9,17 @@ export default defineConfig({
 },
   base: './',
   build: {
-    outDir: '../dist',
-    emptyOutDir: true,
+    outDir: 'dist',
   },
   server: {
     proxy: {
       '/socket.io': {
-        target: 'http://localhost:3000',
+        target: 'https://meetup-backend-dwvk.onrender.com',
         ws: true,
         changeOrigin: true
       },
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://meetup-backend-dwvk.onrender.com',
         changeOrigin: true
       }
     },
